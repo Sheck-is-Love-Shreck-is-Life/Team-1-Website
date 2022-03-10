@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jade-walker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jade-walker
+  template: 
+    metadata:
+      labels:
+        app: jade-walker
+    spec:
+      containers:
+      - name: jade-walker
+        image: 'gcr.io/team-1-group-project/team-1-website:latest'
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 250M 
+          requests:
+            cpu: 50m
+            memory: 100M
