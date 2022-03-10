@@ -20,7 +20,7 @@ steps:
     id: Deploy Pod to Kubernetes
     args:
       - run
-      - --filename=dev.yaml
+      - --filename=spencer-pod.yaml
       - --image=gcr.io/$PROJECT_ID/team-1-website:$SHORT_SHA
       - --location=us-east1-b
       - --cluster=cluster-1
