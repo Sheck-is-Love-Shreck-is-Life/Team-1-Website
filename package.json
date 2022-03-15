@@ -1,0 +1,22 @@
+{
+  "name": "team1package.json",
+  "version": "1.0.0",
+  "description": "Team 1's repository for CIT262",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sheck-is-Love-Shreck-is-Life/Team-1-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sheck-is-Love-Shreck-is-Life/Team-1-Website/issues"
+  },
+  "homepage": "https://github.com/Sheck-is-Love-Shreck-is-Life/Team-1-Website#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
