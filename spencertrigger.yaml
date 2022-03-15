@@ -22,5 +22,5 @@ steps:
   - run
   - --filename=spencer-pod.yaml
   - --image=gcr.io/$PROJECT_ID/team-1-website:$SHORT_SHA
-  - --location=us-east1-b
+  - --location=us-central1-c
   - --cluster=cluster-1
