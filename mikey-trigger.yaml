@@ -8,14 +8,14 @@ steps:
   - 'build'
   - '.'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
+  - 'gcr.io/team-1-group-project/team-1-website:latest'
   
 #this step pushes the image
 - name: 'gcr.io/cloud-builders/docker'
   id: Push 
   args: 
   - 'push'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
+  - 'gcr.io/team-1-group-project/team-1-website:latest'
 
      # This step deploys the application in Kubernetes
 - name: 'gcr.io/cloud-builders/gke-deploy'
