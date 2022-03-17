@@ -8,14 +8,14 @@ steps:
   - 'build'
   - '.'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
+  - 'gcr.io/team-1-group-project/team-1-website:latest'
   
 #this step pushes the image
 - name: 'gcr.io/cloud-builders/docker'
   id: Push 
   args: 
   - 'push'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
+  - 'gcr.io/team-1-group-project/team-1-website:latest'
 
      # This step deploys the application in Kubernetes
 - name: 'gcr.io/cloud-builders/gke-deploy'
@@ -23,7 +23,7 @@ steps:
   args:
   - run
   - --filename=mikey-pod.yaml
-  - --image=gcr.io/$PROJECT_ID/team-1-website:$SHORT_SHA
+  - --image=gcr.io/team-1-group-project/team-1-website:latest
   - --location=us-central1-c
   - --cluster=cluster-1
 
