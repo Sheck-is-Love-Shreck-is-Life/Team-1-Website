@@ -22,7 +22,7 @@ steps:
   id: Deploy Pod to Kubernetes
   args:
   - run
-  - --filename=dev.yaml
-  - --image=gcr.io/$PROJECT_ID/team-1-website:$SHORT_SHA
+  - --filename=jade-pod.yaml
+  - --image=gcr.io/team-1-group-project/team-1-website:latest
   - --location=us-central1-c
   - --cluster=cluster-1
