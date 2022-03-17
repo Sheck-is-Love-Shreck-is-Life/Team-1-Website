@@ -1,26 +1,26 @@
-steps:
-#this step builds the image
-- name: 'gcr.io/cloud-builders/docker'
-  id: Build Docker Image
-  args:
-  - 'build'
-  - '.'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
-  
-#this step pushes the image
-- name: 'gcr.io/cloud-builders/docker'
-  id: Push 
-  args: 
-  - 'push'
-  - 'gcr.io/$PROJECT_ID/team-1-website:latest'
-
-  # This step deploys the application in Kubernetes
-- name: 'gcr.io/cloud-builders/gke-deploy'
-  id: Deploy Pod to Kubernetes
-  args:
-  - run
-  - --filename=clayson-pod.yaml
-  - --image=gcr.io/$PROJECT_ID/team-1-website:$SHORT_SHA
-  - --location=us-east1-b
-  - --cluster=cluster-1
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: clayson-frederickson
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clayson-frederickson
+  template:
+    metadata:
+      labels: 
+        app: clayson-frederickson
+    spec:
+      containers:
+      - name: clayson-frederickson
+        image: gcr.io/team-1-group-project/team-1-website
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 100m
+            memory: 250M
+          requests:
+            cpu: 50m
+            memory: 100M
