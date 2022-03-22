@@ -24,3 +24,15 @@ spec:
           requests:
             cpu: 50m
             memory: 100M
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ClaysonPod-service
+spec:
+  selector:
+    app: clayson-frederickson
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
