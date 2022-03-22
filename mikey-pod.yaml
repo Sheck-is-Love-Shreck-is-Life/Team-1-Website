@@ -25,12 +25,12 @@ spec:
             cpu: 50m
             memory: 100M
 
----
+--- 
 apiVersion: v1
 kind: Service
-metadata:
-  name: mikeys-pod-service
-spec:
+metadata: 
+  name: mikey-pod-service
+spec: 
   selector:
     app: mikey-stong
   type: LoadBalancer
