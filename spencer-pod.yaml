@@ -24,3 +24,16 @@ spec:
           requests:
             cpu: 50m
             memory: 100M
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: spencer-pod-service
+spec:
+  selector:
+    app: spencer-baker
+  type: LoadBalancer
+  ports: 
+  - port: 80
+  targetPort: 3000
+---
