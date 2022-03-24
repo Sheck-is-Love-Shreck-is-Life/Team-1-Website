@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sheck-is-Love-Shreck-is-Life/Team-1-Website.git"
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/Sheck-is-Love-Shreck-is-Life/Team-1-Website#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mocha": "^9.2.2",
+    "node-fetch": "^3.2.3"
   }
 }
