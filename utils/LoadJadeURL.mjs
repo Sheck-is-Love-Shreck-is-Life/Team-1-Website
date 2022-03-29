@@ -7,7 +7,7 @@ const loadJadeURL = async () => {
         headers: {'Content-Type':'application/json'}
     };
 
-    const apiResponse = await fetch('http://localhost:3000/jade',options);
+    const apiResponse = await fetch('http://34.71.68.104/jade',options);
     const loginResponse = await apiResponse.text();
 
     return loginResponse;
