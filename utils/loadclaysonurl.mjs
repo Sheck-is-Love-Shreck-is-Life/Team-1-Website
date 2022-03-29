@@ -7,7 +7,7 @@ const loadclaysonurl = async () => {
         headers: {'Content-Type':'application/json'}
     };
 
-    const apiResponse = await fetch('http://35.193.253.152/clayson',options);
+    const apiResponse = await fetch('http://34.66.70.235/clayson',options);
     const testResponse = await apiResponse.text();
 
     return testResponse;
