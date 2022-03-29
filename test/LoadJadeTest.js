@@ -1,9 +1,9 @@
-import loadJadeURL from '../utils/loadJadeURL.mjs';
 import assert from 'assert';
+import LoadJadeURL from '../utils/LoadJadeURL.mjs';
 
-it("Tests Jade URL Endoint",async ()=>{
+it("Tests Jade URL",async ()=>{
 
-    const urlResponse = await loadJadeURL();
+    const urlResponse = await LoadJadeURL();
     console.log('URL Response: ')+urlResponse;
     assert.equal(urlResponse, 'Hello Jade');
-})
+});
