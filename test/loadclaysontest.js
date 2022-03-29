@@ -5,6 +5,6 @@ it("Tests claysons URL",async ()=>{
 
     const urlResponse = await loadclaysonurl();
     console.log("URL Response: ")+urlResponse
-    assert.equal(urlResponse, "Hello clayson");
+    assert.equal(urlResponse, "Hello Clayson");
 
 });
