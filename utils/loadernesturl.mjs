@@ -7,7 +7,7 @@ const loadernesturl = async () => {
         headers: {'Content-Type':'application/json'}
     };
 
-    const apiResponse = await fetch('http://35.193.253.152/spen',options);
+    const apiResponse = await fetch('',options);
     const testResponse = await apiResponse.text();
 
     return testResponse;

@@ -24,3 +24,15 @@ spec:
           requests:
             cpu: 50m
             memory: 100M
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: ernest-pod-service
+spec:
+  selector:
+    app: ernest-danso
+  type: LoadBalancer
+  ports: 
+  - port: 80
+    targetPort: 3000
